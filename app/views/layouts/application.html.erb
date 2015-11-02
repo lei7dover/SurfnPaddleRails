@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <title><%= @page_title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class= "jumbotron">
+    <nav class = "navbar navbar-transparent navbar-default navbar-static-top">
+
+      <div class= "row col-xs-8">
+        <h4 id="header-left" class="col-xs-4"><%= link_to "Lauren's Blog", home_path %></h4>
+      </div>
+      <div id="right-nav" class="row col-xs-4 navbar-right">
+        <span><%= link_to "<h4>ABOUT</h4>".html_safe, about_path,:class=> "col-xs-4 text-right"%></span>
+        <span><a href="#"><h4 class="col-xs-4 text-right"><a href="#">SEARCH<span id="magnify" class= "glyphicon glyphicon-search" aria-hidden="true"></span></a></h4></a></span>
+      </div>
+    </nav>
+      <h1>Life Flipped Upside Down</h1>
+      <h3 class="bg-primary"> The ever changing life of Lauren</h3>
+  </div>
+
+<%= yield %>
+<div class = "container-fluid">
+  <div id="bottom-row-pics" class= "row">
+    <div class = "col-xs-12" style= "border: 0px solid red">
+      <h2 class= "text-center "><strong> MOST POPULAR POSTS</strong></h2></div>
+
+    <% @posts.each do |p| %>
+    <div id="<%= p.id%>"class = "col-xs-3">
+      <div class="hovereffect">
+        <div class="overlay">
+          <%= link_to "<h4>#{p.title}</h4>".html_safe, otherposts_path(:id => p.id),:class=>"info" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+    <nav id="navbar-bottom" class = "navbar navbar-default navbar-fixed-bottom navbar-right">
+      <div class= "container">
+        <p class = "navbar-text navbar-right"><%=link_to("Google", "http://www.google.com")%></p>
+        <p class = "navbar-text navbar-right"><%= link_to("Wastebits", "http://www.wastebits.com")%></p>
+        <p class = "navbar-text navbar-right"><%= link_to("NewPointe", "http://www.newpointe.org")%></p>
+        <p class = "navbar-text navbar-right"><%= link_to("ESPN", "http://www.espn.com")%></p>
+        <p id="items" class = "navbar-text navbar-left">Copyright 2015, All Rights Reserved</p>
+      </div>
+    </nav>
+  </div>
+</div>
+
+</body>
+</html>
