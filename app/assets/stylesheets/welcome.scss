@@ -1,0 +1,241 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron {
+  background-image: url(alaskalandscape.jpg);
+  background-size:120% 120%;
+  height: 80vh;
+  text-align: center;
+}
+.jumbotron h3{
+  color:white;
+  text-shadow: black;
+}
+
+.ProfilePic {
+  max-width: 30%;
+  max-height:30%;
+  padding-top:15px;
+
+}
+#socialmedialist{
+  list-style-type:none;
+  display:inline;
+}
+
+#socialmedialist a{
+  padding-bottom:20px;
+  padding-left:0px;
+  padding-right:0px;
+}
+
+#authordate{
+  padding-bottom:10px;
+}
+#authordate a{
+  padding-left:0px;
+}
+
+#authorinfo h6{
+  text-align:left;
+}
+
+#authorinfo img{
+  height:30px;
+  width:60px;
+}
+
+#authorinfo {
+  margin-bottom:10px;
+  padding-bottom:15px;
+}
+
+#therail{
+  padding:20px;
+}
+img.Bloglogo {
+  max-width:50px;
+}
+
+#header-left {
+  background-image:url(image_path('bloglogo.png'));
+  background-size:50px;
+  background-repeat:no-repeat;
+  padding:25px;
+  margin-left: 25px;
+}
+
+.centersection p {
+  font-family:Times;
+  font-size:18px;
+}
+.sunset{
+  padding-top:30px;
+  padding-bottom:15px;
+}
+
+.centersection{
+  padding-right:40px;
+}
+a:active{
+  text-decoration:none;
+}
+a:visited{
+    color:gray;
+    text-decoration:none;
+  }
+
+a:hover{
+  text-decoration:none;
+}
+#headliner{
+padding:20px;
+margin:10px;
+border-left:1px solid lightgray;
+}
+
+.navbar-default{
+  background:transparent;
+  border-color:transparent;
+  box-shadow: none;
+}
+
+#navbar-bottom {
+  background: #337AB7;
+}
+
+#items {
+  color: white;
+}
+
+p.navbar-text.navbar-right a{
+  color:white;
+}
+
+#HockingHills{
+  background-image:url(image_path("hay.jpg"));
+  background-size:cover;
+  height:400px;
+  margin:0px;
+  padding:0px;
+}
+#Chicago{
+  background-image:url(image_path("chicago.jpg"));
+  background-size:cover;
+  height:400px;
+  margin:0px;
+  padding:0px;
+}
+
+#LakeMohawk{
+  background-image:url(image_path("lakesunset.jpg"));
+  background-size:cover;
+  height:400px;
+  margin:0px;
+  padding:0px;
+}
+#Sedona{
+  background-image:url(image_path("sedona.jpg"));
+  background-size:cover;
+  height:400px;
+  margin:0px;
+  padding:0px;
+}
+#Home{
+  background-image:url(image_path("winter.jpg"));
+  background-size:cover;
+  height:400px;
+  margin:0px;
+  padding:0px;
+}
+
+
+#magnify{
+  padding-left: 10px;
+}
+
+#right-nav{
+  padding-top: 15px;
+}
+
+#bottom-row-pics{
+margin-right:-15px;
+margin-left:-15px;
+border-top:1px solid lightgray;
+}
+#bottom-row-pics h4{
+  font:Helvetica;
+  font-weight: bolder;
+  color:white;
+  font-variant: small-caps;
+  font-size:xx-large;
+  text-align:center;
+}
+
+#bottom-row-pics h2{
+  padding: 10px;
+}
+
+.btn-group{
+  padding-top:20px;
+  padding-bottom:50px;
+}
+
+.btn-default{
+  border-color:lightblue;
+  background-color:#337AB7;
+  background-image:none;
+  color:white;
+  text-shadow:none;
+}
+
+button {
+  margin: 20px 20px 20px 20px;
+  box-align:block;
+}
+
+button img{
+  max-width: 30px;
+  max-height: 30px;
+  padding:5px;
+}
+.btn-group img{
+  image-size:relative;
+}
+
+
+.hovereffect {
+width:100%;
+height:100%;
+float:left;
+overflow:hidden;
+position:relative;
+text-align:center;
+cursor:default;
+}
+
+.hovereffect .overlay {
+  width:100%;
+  height:100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.hovereffect:hover .overlay {
+  background-color: rgba(100,100,100,0.6);
+}
+
+.hovereffect h4 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  padding: 10px;
+  background: rgba(0, 0, 0, .6);
+}

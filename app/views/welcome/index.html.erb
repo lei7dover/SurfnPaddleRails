@@ -1,0 +1,68 @@
+
+    <div class = "container" id="content">
+      <div class = "row">
+        <div class = "col-xs-12 col-md-8 centersection">
+          <h2><%=@post.title%></h2>
+          <div class= "row">
+            <div id="authordate" class= "col-xs-12">
+              <%=image_tag "profilepic.jpg", :class=> "img-circle img-responsive col-xs-1", :alt=>"Profile Picture"%>
+              <a class="text-left col-xs-2" href="#"> <%=@post.author.name%></a>
+              <p>on <a href="#"><%=@post.created_at.to_s(:long)%></a></p>
+            </div>
+          </div>
+
+          <%= simple_format(@post.body) %>
+          <%= image_tag(@post.image, :class => "img-responsive sunset") %>
+
+          <div class="btn-group" role="group" aria-label="...">
+            <button id="comments" type="button" class="btn btn-default"><%=image_tag "chatbubble.png"%> Read Comments</button>
+            <button id="later" type="button" class="btn btn-default"><%=image_tag "cloudupload.png"%>Read Later</button>
+            <button id="share" type="button" class="btn btn-default"><%=image_tag "shareicon.png"%>Share This Post</button>
+          </div>
+
+        </div>
+
+        <div id="getconnected" class = "col-xs-12 col-md-4">
+          <%=image_tag"profilepic.jpg", :class=> "ProfilePic img-circle img-responsive center-block", :alt=>"Profile Picture"%>
+          <h3 class="col-xs-12 text-center">Lauren Imhoff</h3>
+          <ul id="socialmedialist">
+          <li><a href = "http://www.facebook.com" class= "text-center col-xs-4">Facebook</a></li>
+          <li><a href= "http://www.twitter.com" class= "text-center col-xs-4">Twitter</a></li>
+          <li><a href = "http://www.instagram.com" class= "text-center col-xs-4"> Instagram</a></li>
+        </ul>
+        </div>
+
+          <div id="therail" class= "col-xs-12 col-md-4">
+            <p class="text-right"><%=image_tag"TheRail.jpg", :class=>"img-responsive"%><strong><a href="http://www.therailburger.com">About The Rail</a></strong></p>
+          </div>
+            <div id="authorinfo" class ="col-xs-12 col-md-4">
+              <h6><strong>ABOUT THE AUTHOR</strong></h6>
+              <p> Factory Worker, Computer Technician, Office Administrative Assistant, Teacher, Customer Support Rep, and NOW Developer! </p>
+            </div>
+          </div>
+        </div>
+
+        <!--<div id="Chicago" class = "col-xs-3">
+          <div class="hovereffect">
+            <div class="overlay">
+              <a class="info" href="#"><h4>Chicago Trip</h4></a>
+            </div>
+          </div>
+        </div>
+
+        <div id="LakeMohawk" class = "col-xs-3">
+          <div class="hovereffect">
+            <div class="overlay">
+              <a class="info" href="#"><h4>Lake Mohawk at Sunset</h4></a>
+            </div>
+          </div>
+        </div>
+
+        <div id="Sedona" class = "col-xs-3">
+          <div class="hovereffect">
+            <div class="overlay">
+              <a class="info"href="#"><h4>Sedona, AZ</h4></a>
+            </div>
+          </div>
+        </div>
+-->
