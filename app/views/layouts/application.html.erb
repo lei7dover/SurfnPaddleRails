@@ -20,11 +20,11 @@
     <nav class = "navbar navbar-transparent navbar-default navbar-static-top">
 
       <div class= "row col-xs-8">
-        <h4 id="header-left" class="col-xs-4"><%= link_to "Lauren's Blog", home_path %></h4>
+        <h4 id="header-left" class="col-xs-4 hidden-xs visible-md visible-lg"><%= link_to "Lauren's Blog", home_path %></h4>
       </div>
-      <div id="right-nav" class="row col-xs-4 navbar-right">
-        <span><%= link_to "<h4>ABOUT</h4>".html_safe, about_path,:class=> "col-xs-4 text-right"%></span>
-        <span><a href="#"><h4 class="col-xs-4 text-right"><a href="#">SEARCH<span id="magnify" class= "glyphicon glyphicon-search" aria-hidden="true"></span></a></h4></a></span>
+      <div id="right-nav" class="row col-xs-12 col-md-4 center-block offset-col-md-4">
+        <span><%= link_to "<h4>ABOUT</h4>".html_safe, about_path,:class=> "col-xs-5 text-right"%></span>
+        <span><a href="#"><h4 class="col-xs-5 text-right"><a href="#">SEARCH<span id="magnify" class= "glyphicon glyphicon-search" aria-hidden="true"></span></a></h4></a></span>
       </div>
     </nav>
       <h1>Life Flipped Upside Down</h1>
@@ -38,7 +38,7 @@
       <h2 class= "text-center "><strong> MOST POPULAR POSTS</strong></h2></div>
 
     <% @posts.each do |p| %>
-    <div id="<%= p.id%>"class = "col-xs-3">
+    <div id="<%= p.html_id%>" class="col-xs-12 col-md-3">
       <div class="hovereffect">
         <div class="overlay">
           <%= link_to "<h4>#{p.title}</h4>".html_safe, otherposts_path(:id => p.id),:class=>"info" %>

@@ -7,8 +7,9 @@ class WelcomeController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @posts = Post.sorted.reject{|p| p.id == @post.id}
+    @posts = Post.where("id != ?",params[:id]).order("created_at DESC").limit(4)
     @page_title = @post.title
+    render :template=> "welcome/index.html.erb"
   end
 
 end
