@@ -20,6 +20,12 @@
             <button id="share" type="button" class="btn btn-default"><%=image_tag "shareicon.png"%>Share This Post</button>
           </div>
 
+            <div class="btn-group" role = "group" aria-label= "...">
+              <button type = "button" class = "btn btn-default"><%= link_to "New Post", new_welcome_path%></button>
+              <button type = "button" class = "btn btn-default"><%= link_to "Edit this blog post", edit_welcome_path(@post)%></button>
+              <button type = "button" class = "btn btn-default"><%= link_to "Delete Post", welcome_index_path%></button>
+              <button type = "button" class = "btn btn-default"><%= link_to "HomePage", welcome_index_path %></button>
+            </div>
         </div>
 
         <div id="getconnected" class = "col-xs-12 col-md-4">

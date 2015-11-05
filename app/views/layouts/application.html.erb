@@ -32,13 +32,18 @@
   </div>
 
 <%= yield %>
+
 <div class = "container-fluid">
   <div id="bottom-row-pics" class= "row">
     <div class = "col-xs-12" style= "border: 0px solid red">
       <h2 class= "text-center "><strong> MOST POPULAR POSTS</strong></h2></div>
 
     <% @posts.each do |p| %>
+    <% if p.html_id %>
     <div id="<%= p.html_id%>" class="col-xs-12 col-md-3">
+      <% else %>
+      <div class="col-xs-12 col-md-3 default_img">
+        <% end %>
       <div class="hovereffect">
         <div class="overlay">
           <%= link_to "<h4>#{p.title}</h4>".html_safe, otherposts_path(:id => p.id),:class=>"info" %>

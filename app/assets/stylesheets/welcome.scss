@@ -149,7 +149,13 @@ p.navbar-text.navbar-right a{
   margin:0px;
   padding:0px;
 }
-
+.default_img{
+  background-image:url(image_path("indysunset.jpg"));
+  background-size:cover;
+  height:400px;
+  margin:0px;
+  padding:0px;
+}
 
 #magnify{
   padding-left: 10px;
